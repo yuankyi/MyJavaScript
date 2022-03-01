@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="js/my.js"></script>
+</head>
+<body>
+    <!-- 这样的无表单域无法提交（只有整个表单才可以提交），
+        但是当使用JavaScript响应输入时，我们通常不希望用正常的方式提交域。 -->
+    <label>out</label>
+    <input type="text" name="out" />
+
+    <form method="get" action="test.html" name="testform">
+        <h2>get</h2>
+        <p>
+            <label>text</label>
+            <!-- name 作为参数的键值 -->
+            <input type="text" name="mytext" />
+            <br />
+            <label>password</label>
+            <input type="password" name="password" />
+            <br />
+            <input type="checkbox" name="checkbox" checked="checked" value="XX" />(checkbox)
+            <br />
+            <input type="radio" name="radio" value="A" />
+            <input type="radio" name="radio" value="B" />
+            <input type="radio" name="radio" value="C" />
+            (radio)<br />
+            <input type="file" multiple />(file)
+            <br />
+
+        </p>
+        <input type="submit" />
+    </form>
+    <script>
+        myHttp();
+    </script>
+</body>
+</html>
